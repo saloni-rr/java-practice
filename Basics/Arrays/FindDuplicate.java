@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FindDuplicate {
-        public static void main(String args[]){
+           public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
          System.out.println("Enter size of array:");
         int n=sc.nextInt();
