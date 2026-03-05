@@ -1,24 +1,23 @@
-import java.util.Scanner;
+import java.util.*;
 public class NonRepeatingCharacter {
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any string :");
-        String str=sc.nextLine();
-        char c=0;
-        boolean isExist=false;
+        String s=sc.nextLine();
+        String str=s.toLowerCase();
+        HashMap<Character,Integer> map=new HashMap<>();
         for(int i=0;i<str.length();i++){
-            for(int j=i+1;j<str.length();j++){
-               if(str.charAt(i)!=str.charAt(j)){
-                c=str.charAt(i);
-                isExist=true;
+            char ch=str.charAt(i);
+            map.put(ch,map.getOrDefault(ch, 0)+1);
+        }
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(map.get(ch)==1){
+                System.out.println("First NonRepeatingCharacter is = "+ch);
                 break;
-               }
             }
         }
-        if(isExist){
-            System.out.println("Here is:"+c);
-        }
-
-        }
     }
+} 
+
 
