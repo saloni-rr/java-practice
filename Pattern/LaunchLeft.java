@@ -12,6 +12,5 @@ public class LaunchLeft {
             }
             System.out.println();
         }
-  
     }
 }
